@@ -30,7 +30,7 @@ jobs:
         trivy fs --format table -o trivy-fs-report.html .
 
     - name: SonarQube Scan
-      uses: sonarsource/sonarqube-scan-action@master
+      uses: sonarsource/sonarcloud-github-action@v2.1.0
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
@@ -41,7 +41,7 @@ jobs:
   # Check the Quality Gate status.
     - name: SonarQube Quality Gate check
       id: sonarqube-quality-gate-check
-      uses: sonarsource/sonarqube-quality-gate-action@master
+      uses: sonarsource/sonarcloud-github-action@v2.1.0
       # Force to fail step after specific time.
       timeout-minutes: 5
       env:
