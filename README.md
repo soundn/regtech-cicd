@@ -51,3 +51,6 @@ you can check again with `kubectl get svc -n (your-namespace)`
 
 ![alt text](<Screenshot 2024-09-07 at 18.58.30.png>)
 
+
+
+<!-- Security scan triggered at 2025-09-02 03:43:22 -->
